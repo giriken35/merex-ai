@@ -603,15 +603,38 @@ export default function Home() {
       <footer className="border-t border-zinc-900 bg-zinc-950 py-8 text-center text-xs text-zinc-600">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} {APP_CONFIG.name}. All rights reserved.</p>
-          <div className="flex gap-4 text-zinc-500">
-            <a href="#" className="hover:text-zinc-400 transition-colors">
+          <div className="flex flex-wrap justify-center gap-4 text-zinc-500">
+            <a
+              href="https://azorb-site.vercel.app/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-400 transition-colors"
+            >
               利用規約
             </a>
-            <a href="#" className="hover:text-zinc-400 transition-colors">
+            <a
+              href="https://azorb-site.vercel.app/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-400 transition-colors"
+            >
+              プライバシーポリシー
+            </a>
+            <a
+              href="https://azorb-site.vercel.app/legal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-400 transition-colors"
+            >
               特定商取引法に基づく表記
             </a>
-            <a href="#" className="hover:text-zinc-400 transition-colors">
-              プライバシーポリシー
+            <a
+              href="https://azorb-site.vercel.app/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-400 transition-colors"
+            >
+              お問い合わせ
             </a>
           </div>
         </div>
