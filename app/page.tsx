@@ -31,7 +31,7 @@ const SAAS_CONFIG = {
     "ハルシネーション（嘘のスペック・存在しない機能）を完全排除。仕様表・メリットデメリット・口コミ要約・CTAボックスまで整ったWordPress貼り付け用HTMLを即座に出力します。",
 
   // 決済リンク (Stripe Payment Link または Gumroad 商品URL)
-  checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL || "https://buy.stripe.com/test_placeholder_29usd",
+  checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL || "https://buy.stripe.com/9B614of2FbPf8y43zcbo401",
   priceUsd: "$29",
   priceJpyApprox: "約4,400円",
   pricingBadge: "買い切り / ライフタイムアクセス（月額費用なし）",
