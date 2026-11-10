@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ReviewCraft AI - Amazon・楽天URLからWordPressレビュー記事を自動生成",
+  title: "MerEx AI (メルエクス) - AliExpressからメルカリ出品文を一瞬で自動生成",
   description:
-    "ハルシネーション対策済み。商品URLを入力するだけで、スペック表・忖度なしのデメリット・口コミ要約・CTA付きWordPress用HTMLを即時生成するアフィリエイト支援ツール。",
+    "AliExpress等の海外商品情報から、メルカリ・メルカリShopsで『検索に引っかかり売れる』40字タイトルとトラブル防止付き説明文を1クリックで自動生成。",
   openGraph: {
-    title: "ReviewCraft AI - Amazon・楽天URLからWordPressレビュー記事を自動生成",
-    description: "ハルシネーション対策済みの高品質アフィリエイトレビュー記事を即座に自動生成。",
+    title: "MerEx AI - AliExpress輸入セラー特化のメルカリ出品文自動生成ツール",
+    description: "コピペで即出品。検索キーワード・輸入免責文・クリック率特化タイトルを瞬時に構築。",
     type: "website",
   },
 };
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="dark">
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-amber-500 selection:text-zinc-950">
+      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-rose-500 selection:text-white">
         {children}
       </body>
     </html>
