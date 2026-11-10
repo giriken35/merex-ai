@@ -545,10 +545,39 @@ export default function Home() {
       <footer className="mt-20 border-t border-zinc-800/80 bg-zinc-950 py-8 text-center text-xs text-zinc-500">
         <div className="mx-auto max-w-5xl px-4">
           <p>© {new Date().getFullYear()} {SAAS_CONFIG.name}. Built for Smart Affiliates.</p>
-          <div className="mt-2 flex justify-center gap-4">
-            <a href="#" className="hover:text-zinc-400 transition">利用規約</a>
-            <a href="#" className="hover:text-zinc-400 transition">プライバシーポリシー</a>
-            <a href="#" className="hover:text-zinc-400 transition">特定商取引法に基づく表記</a>
+          <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <a
+              href="https://azorb-site.vercel.app/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-300 transition"
+            >
+              利用規約
+            </a>
+            <a
+              href="https://azorb-site.vercel.app/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-300 transition"
+            >
+              プライバシーポリシー
+            </a>
+            <a
+              href="https://azorb-site.vercel.app/legal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-300 transition"
+            >
+              特定商取引法に基づく表記
+            </a>
+            <a
+              href="https://azorb-site.vercel.app/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-300 transition"
+            >
+              お問い合わせ
+            </a>
           </div>
         </div>
       </footer>
