@@ -37,7 +37,7 @@ const APP_CONFIG = {
   // Stripe / Gumroad の決済URL (環境変数またはフォールバック)
   checkoutUrl:
     process.env.NEXT_PUBLIC_CHECKOUT_URL ||
-    "https://buy.stripe.com/test_placeholder_merex19",
+    "https://buy.stripe.com/8x29AUbQt06xeWsb1Ebo402",
   priceUsd: "$19",
   priceJpy: "約2,900円",
   pricingNote: "買い切り / ライフタイムアクセス（月額料金なし）",
