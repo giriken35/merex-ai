@@ -27,6 +27,7 @@ import { toast } from "sonner";
 import { DemoPreview } from "@/components/demo-preview";
 import { BackToTop } from "@/components/back-to-top";
 
+import { LegalModal, LegalTab } from "@/components/legal-modal";
 /**
  * =================================================================
  * ⚙️ プロダクト基本設定 (Stripe / Gumroad 決済リンクなどを一括管理)
@@ -109,6 +110,7 @@ const PRESETS = [
 ];
 
 export default function Home() {
+  const [legalModalTab, setLegalModalTab] = useState<LegalTab | null>(null);
   // 入力フォームの状態
   const [sourceTitle, setSourceTitle] = useState("");
   const [colorSize, setColorSize] = useState("");
@@ -634,25 +636,31 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6 text-slate-600 font-semibold">
             <a
               href="https://azorb-site.vercel.app/terms"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-rose-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setLegalModalTab("terms");
+              }}
+              className="cursor-pointer hover:text-rose-600 transition-colors"
             >
               利用規約
             </a>
             <a
               href="https://azorb-site.vercel.app/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-rose-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setLegalModalTab("privacy");
+              }}
+              className="cursor-pointer hover:text-rose-600 transition-colors"
             >
               プライバシーポリシー
             </a>
             <a
               href="https://azorb-site.vercel.app/legal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-rose-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setLegalModalTab("legal");
+              }}
+              className="cursor-pointer hover:text-rose-600 transition-colors"
             >
               特定商取引法に基づく表記
             </a>
@@ -667,6 +675,16 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* 統合リーガルモーダル（3タブ・黒画面のチラつきを完全に防止） */}
+      <LegalModal
+        isOpen={legalModalTab !== null}
+        onClose={() => setLegalModalTab(null)}
+        initialTab={legalModalTab || "legal"}
+        toolName="MerEx AI"
+        priceText="買い切り $19"
+        customDisclaimer="本サービスは、商品情報の抽出・出品テキスト生成を支援するツールであり、実際の売上・利益やプラットフォーム上の審査通過を保証するものではありません。"
+      />
 
       {/* トップへ戻るボタン */}
       <BackToTop />
