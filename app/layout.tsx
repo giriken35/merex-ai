@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
+import { Noto_Sans_JP } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
+  variable: "--font-noto-sans-jp",
+});
 
 export const metadata: Metadata = {
   title: "MerEx AI (メルエクス) - AliExpressからメルカリ出品文を一瞬で自動生成",
@@ -18,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="dark">
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-rose-500 selection:text-white">
+    <html lang="ja" className="scroll-smooth">
+      <body
+        className={`${notoSansJP.className} ${notoSansJP.variable} font-sans min-h-screen bg-slate-50 text-slate-900 antialiased selection:bg-rose-500 selection:text-white`}
+      >
+        <Toaster position="top-center" richColors />
         {children}
       </body>
     </html>
